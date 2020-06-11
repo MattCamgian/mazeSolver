@@ -36,8 +36,8 @@ def make_maze(w=6, h=8):
 
     start_x = 1
     start_y = 1
-    end_x = w * 2 - 1
-    end_y = h * 2 - 1
+    end_x = h * 2 - 1
+    end_y = w * 2 - 1
 
     return maze, start_x, start_y, end_x, end_y
 
