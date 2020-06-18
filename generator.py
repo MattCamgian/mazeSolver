@@ -37,28 +37,28 @@ def make_maze(w=6, h=8):
 
     start_x = 1
     start_y = 1
-    end_x = h * 2 - 1
-    end_y = w * 2 - 1
+    end_x = w * 2 - 1
+    end_y = h * 2 - 1
 
     return maze, start_x, start_y, end_x, end_y
 
 def make_empty_env(w=6, h=8):
-    env = np.ones([h * 2, w * 2])
+    env = np.ones([w * 2, h * 2])
 
     for w_index in range(1, w*2):
         for h_index in range(1, h * 2):
-            env[h_index,w_index] = 0
+            env[w_index,h_index] = 0
 
-    env = np.hstack([env, np.ones([h*2,1])])
-    env = np.vstack([env, np.ones([1,w*2+1])])
+    env = np.hstack([env, np.ones([w*2,1])])
+    env = np.vstack([env, np.ones([1,h*2+1])])
 
     start_x = 1
     start_y = 1
-    end_x = h * 2 - 1
-    end_y = w * 2 - 1
+    end_x = w * 2 - 1
+    end_y = h * 2 - 1
     return env, start_x, start_y, end_x, end_y
 
-def create_q_table(h, w, start_x, start_y, end_x, end_y):
+def create_q_table(w, h, start_x, start_y, end_x, end_y):
     q_table = []
     for i in range(0,w*2+1):
         row = []

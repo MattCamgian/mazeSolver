@@ -10,7 +10,7 @@ LEFT = 2
 RIGHT = 3
 
 width = 3
-height = 3
+height = 4
 
 epsilon = 0.4
 alpha = 0.1
