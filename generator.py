@@ -40,7 +40,7 @@ def make_maze(w=6, h=8):
     end_x = w * 2 - 1
     end_y = h * 2 - 1
 
-    return maze, start_x, start_y, end_x, end_y
+    return maze.transpose(), start_x, start_y, end_x, end_y
 
 def make_empty_env(w=6, h=8):
     env = np.ones([w * 2, h * 2])

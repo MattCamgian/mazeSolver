@@ -2,7 +2,7 @@ import generator
 from printer import printMaze
 
 width = 6
-height = 6
+height = 12
 maze, start_x, start_y, end_x, end_y = generator.make_maze(width, height)
 
 def move(x,y):
